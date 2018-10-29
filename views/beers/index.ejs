@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<h1>All the Beers:</h1>
+<a href="/beers/new">Add a new Beer</a>
+<hr />
+
+<% beers.forEach(function(beer) { %>
+    <h2><a href="/beers/<%= beer._id %>"><%= beer.name %></a></h2>
+    <hr />
+<% }); %>
+
+<%- include('../partials/footer') %>
